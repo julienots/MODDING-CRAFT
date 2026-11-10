@@ -1,0 +1,13 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.cr_voxel.scale": {
+      "loop": true,
+      "bones": {
+        "block": {
+          "scale": "math.max(1, query.property('cr:size'))"
+        }
+      }
+    }
+  }
+}

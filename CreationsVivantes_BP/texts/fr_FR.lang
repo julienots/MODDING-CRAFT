@@ -8,4 +8,4 @@ pack.name=Créations vivantes
 item.cr:vehicle_key.name=Clé de véhicule
 cr.item.vehicle_key=Clé de véhicule
 entity.cr:vehicle.name=Véhicule
-pack.description=Créatures vivantes et véhicules en blocs : construis, anime, chevauche, conduis !
+pack.description=Créatures vivantes et véhicules en blocs (jusqu'à 64 × 64 × 64) : construis, anime, chevauche, conduis !

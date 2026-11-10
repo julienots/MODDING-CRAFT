@@ -9012,6 +9012,30 @@
       },
       "cr:fireproof": {
         "minecraft:fire_immune": true
+      },
+      "cr:vhp_13": {
+        "minecraft:health": {
+          "value": 500,
+          "max": 500
+        }
+      },
+      "cr:vhp_14": {
+        "minecraft:health": {
+          "value": 650,
+          "max": 650
+        }
+      },
+      "cr:vhp_15": {
+        "minecraft:health": {
+          "value": 800,
+          "max": 800
+        }
+      },
+      "cr:vhp_16": {
+        "minecraft:health": {
+          "value": 1000,
+          "max": 1000
+        }
       }
     },
     "components": {
@@ -9112,7 +9136,11 @@
             "cr:vhp_9",
             "cr:vhp_10",
             "cr:vhp_11",
-            "cr:vhp_12"
+            "cr:vhp_12",
+            "cr:vhp_13",
+            "cr:vhp_14",
+            "cr:vhp_15",
+            "cr:vhp_16"
           ]
         },
         "add": {
@@ -9136,7 +9164,11 @@
             "cr:vhp_9",
             "cr:vhp_10",
             "cr:vhp_11",
-            "cr:vhp_12"
+            "cr:vhp_12",
+            "cr:vhp_13",
+            "cr:vhp_14",
+            "cr:vhp_15",
+            "cr:vhp_16"
           ]
         },
         "add": {
@@ -9160,7 +9192,11 @@
             "cr:vhp_9",
             "cr:vhp_10",
             "cr:vhp_11",
-            "cr:vhp_12"
+            "cr:vhp_12",
+            "cr:vhp_13",
+            "cr:vhp_14",
+            "cr:vhp_15",
+            "cr:vhp_16"
           ]
         },
         "add": {
@@ -9184,7 +9220,11 @@
             "cr:vhp_9",
             "cr:vhp_10",
             "cr:vhp_11",
-            "cr:vhp_12"
+            "cr:vhp_12",
+            "cr:vhp_13",
+            "cr:vhp_14",
+            "cr:vhp_15",
+            "cr:vhp_16"
           ]
         },
         "add": {
@@ -9208,7 +9248,11 @@
             "cr:vhp_9",
             "cr:vhp_10",
             "cr:vhp_11",
-            "cr:vhp_12"
+            "cr:vhp_12",
+            "cr:vhp_13",
+            "cr:vhp_14",
+            "cr:vhp_15",
+            "cr:vhp_16"
           ]
         },
         "add": {
@@ -9232,7 +9276,11 @@
             "cr:vhp_9",
             "cr:vhp_10",
             "cr:vhp_11",
-            "cr:vhp_12"
+            "cr:vhp_12",
+            "cr:vhp_13",
+            "cr:vhp_14",
+            "cr:vhp_15",
+            "cr:vhp_16"
           ]
         },
         "add": {
@@ -9256,7 +9304,11 @@
             "cr:vhp_9",
             "cr:vhp_10",
             "cr:vhp_11",
-            "cr:vhp_12"
+            "cr:vhp_12",
+            "cr:vhp_13",
+            "cr:vhp_14",
+            "cr:vhp_15",
+            "cr:vhp_16"
           ]
         },
         "add": {
@@ -9280,7 +9332,11 @@
             "cr:vhp_9",
             "cr:vhp_10",
             "cr:vhp_11",
-            "cr:vhp_12"
+            "cr:vhp_12",
+            "cr:vhp_13",
+            "cr:vhp_14",
+            "cr:vhp_15",
+            "cr:vhp_16"
           ]
         },
         "add": {
@@ -9304,7 +9360,11 @@
             "cr:vhp_9",
             "cr:vhp_10",
             "cr:vhp_11",
-            "cr:vhp_12"
+            "cr:vhp_12",
+            "cr:vhp_13",
+            "cr:vhp_14",
+            "cr:vhp_15",
+            "cr:vhp_16"
           ]
         },
         "add": {
@@ -9328,7 +9388,11 @@
             "cr:vhp_9",
             "cr:vhp_10",
             "cr:vhp_11",
-            "cr:vhp_12"
+            "cr:vhp_12",
+            "cr:vhp_13",
+            "cr:vhp_14",
+            "cr:vhp_15",
+            "cr:vhp_16"
           ]
         },
         "add": {
@@ -9352,7 +9416,11 @@
             "cr:vhp_9",
             "cr:vhp_10",
             "cr:vhp_11",
-            "cr:vhp_12"
+            "cr:vhp_12",
+            "cr:vhp_13",
+            "cr:vhp_14",
+            "cr:vhp_15",
+            "cr:vhp_16"
           ]
         },
         "add": {
@@ -9376,7 +9444,11 @@
             "cr:vhp_9",
             "cr:vhp_10",
             "cr:vhp_11",
-            "cr:vhp_12"
+            "cr:vhp_12",
+            "cr:vhp_13",
+            "cr:vhp_14",
+            "cr:vhp_15",
+            "cr:vhp_16"
           ]
         },
         "add": {
@@ -9400,7 +9472,11 @@
             "cr:vhp_9",
             "cr:vhp_10",
             "cr:vhp_11",
-            "cr:vhp_12"
+            "cr:vhp_12",
+            "cr:vhp_13",
+            "cr:vhp_14",
+            "cr:vhp_15",
+            "cr:vhp_16"
           ]
         },
         "add": {
@@ -14940,6 +15016,118 @@
             "cr:vbox_1",
             "cr:vseat_3_1_3",
             "cr:vt_car"
+          ]
+        }
+      },
+      "cr:set_hp_13": {
+        "remove": {
+          "component_groups": [
+            "cr:vhp_0",
+            "cr:vhp_1",
+            "cr:vhp_2",
+            "cr:vhp_3",
+            "cr:vhp_4",
+            "cr:vhp_5",
+            "cr:vhp_6",
+            "cr:vhp_7",
+            "cr:vhp_8",
+            "cr:vhp_9",
+            "cr:vhp_10",
+            "cr:vhp_11",
+            "cr:vhp_12",
+            "cr:vhp_13",
+            "cr:vhp_14",
+            "cr:vhp_15",
+            "cr:vhp_16"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "cr:vhp_13"
+          ]
+        }
+      },
+      "cr:set_hp_14": {
+        "remove": {
+          "component_groups": [
+            "cr:vhp_0",
+            "cr:vhp_1",
+            "cr:vhp_2",
+            "cr:vhp_3",
+            "cr:vhp_4",
+            "cr:vhp_5",
+            "cr:vhp_6",
+            "cr:vhp_7",
+            "cr:vhp_8",
+            "cr:vhp_9",
+            "cr:vhp_10",
+            "cr:vhp_11",
+            "cr:vhp_12",
+            "cr:vhp_13",
+            "cr:vhp_14",
+            "cr:vhp_15",
+            "cr:vhp_16"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "cr:vhp_14"
+          ]
+        }
+      },
+      "cr:set_hp_15": {
+        "remove": {
+          "component_groups": [
+            "cr:vhp_0",
+            "cr:vhp_1",
+            "cr:vhp_2",
+            "cr:vhp_3",
+            "cr:vhp_4",
+            "cr:vhp_5",
+            "cr:vhp_6",
+            "cr:vhp_7",
+            "cr:vhp_8",
+            "cr:vhp_9",
+            "cr:vhp_10",
+            "cr:vhp_11",
+            "cr:vhp_12",
+            "cr:vhp_13",
+            "cr:vhp_14",
+            "cr:vhp_15",
+            "cr:vhp_16"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "cr:vhp_15"
+          ]
+        }
+      },
+      "cr:set_hp_16": {
+        "remove": {
+          "component_groups": [
+            "cr:vhp_0",
+            "cr:vhp_1",
+            "cr:vhp_2",
+            "cr:vhp_3",
+            "cr:vhp_4",
+            "cr:vhp_5",
+            "cr:vhp_6",
+            "cr:vhp_7",
+            "cr:vhp_8",
+            "cr:vhp_9",
+            "cr:vhp_10",
+            "cr:vhp_11",
+            "cr:vhp_12",
+            "cr:vhp_13",
+            "cr:vhp_14",
+            "cr:vhp_15",
+            "cr:vhp_16"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "cr:vhp_16"
           ]
         }
       }

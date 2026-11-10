@@ -23,6 +23,15 @@
           ],
           "default": 0,
           "client_sync": true
+        },
+        "cr:size": {
+          "type": "int",
+          "range": [
+            1,
+            16
+          ],
+          "default": 1,
+          "client_sync": true
         }
       }
     },
@@ -107,7 +116,89 @@
       }
     },
     "events": {
-      "cr:noop": {}
+      "cr:noop": {},
+      "cr:sz_2": {
+        "remove": {
+          "component_groups": [
+            "cr:sz_4",
+            "cr:sz_8",
+            "cr:sz_16"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "cr:sz_2"
+          ]
+        }
+      },
+      "cr:sz_4": {
+        "remove": {
+          "component_groups": [
+            "cr:sz_2",
+            "cr:sz_8",
+            "cr:sz_16"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "cr:sz_4"
+          ]
+        }
+      },
+      "cr:sz_8": {
+        "remove": {
+          "component_groups": [
+            "cr:sz_2",
+            "cr:sz_4",
+            "cr:sz_16"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "cr:sz_8"
+          ]
+        }
+      },
+      "cr:sz_16": {
+        "remove": {
+          "component_groups": [
+            "cr:sz_2",
+            "cr:sz_4",
+            "cr:sz_8"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "cr:sz_16"
+          ]
+        }
+      }
+    },
+    "component_groups": {
+      "cr:sz_2": {
+        "minecraft:collision_box": {
+          "width": 2.0,
+          "height": 2.0
+        }
+      },
+      "cr:sz_4": {
+        "minecraft:collision_box": {
+          "width": 4.0,
+          "height": 4.0
+        }
+      },
+      "cr:sz_8": {
+        "minecraft:collision_box": {
+          "width": 8.0,
+          "height": 8.0
+        }
+      },
+      "cr:sz_16": {
+        "minecraft:collision_box": {
+          "width": 16.0,
+          "height": 16.0
+        }
+      }
     }
   }
 }

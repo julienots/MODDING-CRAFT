@@ -6,11 +6,11 @@
         "identifier": "geometry.cr_voxel",
         "texture_width": 16,
         "texture_height": 16,
-        "visible_bounds_width": 2,
-        "visible_bounds_height": 2,
+        "visible_bounds_width": 24,
+        "visible_bounds_height": 18,
         "visible_bounds_offset": [
           0,
-          0.5,
+          8,
           0
         ]
       },

@@ -276,7 +276,15 @@
       "render_controllers": [
         "controller.render.cr_voxel",
         "controller.render.cr_voxel_eyes"
-      ]
+      ],
+      "animations": {
+        "scale": "animation.cr_voxel.scale"
+      },
+      "scripts": {
+        "animate": [
+          "scale"
+        ]
+      }
     }
   }
 }
