@@ -1,0 +1,1861 @@
+{
+  "format_version": "1.21.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "cr:core",
+      "is_spawnable": false,
+      "is_summonable": true
+    },
+    "component_groups": {
+      "cr:hp_0": {
+        "minecraft:health": {
+          "value": 10,
+          "max": 10
+        }
+      },
+      "cr:hp_1": {
+        "minecraft:health": {
+          "value": 20,
+          "max": 20
+        }
+      },
+      "cr:hp_2": {
+        "minecraft:health": {
+          "value": 30,
+          "max": 30
+        }
+      },
+      "cr:hp_3": {
+        "minecraft:health": {
+          "value": 45,
+          "max": 45
+        }
+      },
+      "cr:hp_4": {
+        "minecraft:health": {
+          "value": 60,
+          "max": 60
+        }
+      },
+      "cr:hp_5": {
+        "minecraft:health": {
+          "value": 80,
+          "max": 80
+        }
+      },
+      "cr:hp_6": {
+        "minecraft:health": {
+          "value": 100,
+          "max": 100
+        }
+      },
+      "cr:hp_7": {
+        "minecraft:health": {
+          "value": 130,
+          "max": 130
+        }
+      },
+      "cr:hp_8": {
+        "minecraft:health": {
+          "value": 170,
+          "max": 170
+        }
+      },
+      "cr:hp_9": {
+        "minecraft:health": {
+          "value": 220,
+          "max": 220
+        }
+      },
+      "cr:hp_10": {
+        "minecraft:health": {
+          "value": 280,
+          "max": 280
+        }
+      },
+      "cr:hp_11": {
+        "minecraft:health": {
+          "value": 350,
+          "max": 350
+        }
+      },
+      "cr:hp_12": {
+        "minecraft:health": {
+          "value": 400,
+          "max": 400
+        }
+      },
+      "cr:dmg_0": {
+        "minecraft:attack": {
+          "damage": 2
+        }
+      },
+      "cr:dmg_1": {
+        "minecraft:attack": {
+          "damage": 3
+        }
+      },
+      "cr:dmg_2": {
+        "minecraft:attack": {
+          "damage": 4
+        }
+      },
+      "cr:dmg_3": {
+        "minecraft:attack": {
+          "damage": 5
+        }
+      },
+      "cr:dmg_4": {
+        "minecraft:attack": {
+          "damage": 6
+        }
+      },
+      "cr:dmg_5": {
+        "minecraft:attack": {
+          "damage": 8
+        }
+      },
+      "cr:dmg_6": {
+        "minecraft:attack": {
+          "damage": 10
+        }
+      },
+      "cr:dmg_7": {
+        "minecraft:attack": {
+          "damage": 12
+        }
+      },
+      "cr:dmg_8": {
+        "minecraft:attack": {
+          "damage": 15
+        }
+      },
+      "cr:dmg_9": {
+        "minecraft:attack": {
+          "damage": 18
+        }
+      },
+      "cr:dmg_10": {
+        "minecraft:attack": {
+          "damage": 22
+        }
+      },
+      "cr:spd_0": {
+        "minecraft:movement": {
+          "value": 0.15
+        }
+      },
+      "cr:spd_1": {
+        "minecraft:movement": {
+          "value": 0.19
+        }
+      },
+      "cr:spd_2": {
+        "minecraft:movement": {
+          "value": 0.23
+        }
+      },
+      "cr:spd_3": {
+        "minecraft:movement": {
+          "value": 0.27
+        }
+      },
+      "cr:spd_4": {
+        "minecraft:movement": {
+          "value": 0.31
+        }
+      },
+      "cr:box_0": {
+        "minecraft:collision_box": {
+          "width": 0.7,
+          "height": 0.9
+        }
+      },
+      "cr:box_1": {
+        "minecraft:collision_box": {
+          "width": 1.0,
+          "height": 1.8
+        }
+      },
+      "cr:box_2": {
+        "minecraft:collision_box": {
+          "width": 1.6,
+          "height": 2.6
+        }
+      },
+      "cr:box_3": {
+        "minecraft:collision_box": {
+          "width": 2.4,
+          "height": 3.6
+        }
+      },
+      "cr:box_4": {
+        "minecraft:collision_box": {
+          "width": 3.2,
+          "height": 5.0
+        }
+      },
+      "cr:n_guardian": {
+        "minecraft:is_tamed": {},
+        "minecraft:tameable": {
+          "probability": 0.0,
+          "tame_items": "minecraft:barrier"
+        },
+        "minecraft:behavior.owner_hurt_by_target": {
+          "priority": 1
+        },
+        "minecraft:behavior.owner_hurt_target": {
+          "priority": 2
+        },
+        "minecraft:behavior.hurt_by_target": {
+          "priority": 3,
+          "entity_types": {
+            "filters": {
+              "test": "is_family",
+              "subject": "other",
+              "operator": "!=",
+              "value": "player"
+            }
+          }
+        },
+        "minecraft:behavior.nearest_attackable_target": {
+          "priority": 4,
+          "must_see": false,
+          "reselect_targets": true,
+          "within_radius": 16,
+          "entity_types": [
+            {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "monster"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "operator": "!=",
+                    "value": "creeper"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "operator": "!=",
+                    "value": "creation"
+                  }
+                ]
+              },
+              "max_dist": 16
+            }
+          ]
+        },
+        "minecraft:behavior.follow_owner": {
+          "priority": 5,
+          "speed_multiplier": 1.2,
+          "start_distance": 8,
+          "stop_distance": 3
+        },
+        "minecraft:behavior.random_stroll": {
+          "priority": 8,
+          "speed_multiplier": 0.8
+        }
+      },
+      "cr:n_companion": {
+        "minecraft:is_tamed": {},
+        "minecraft:tameable": {
+          "probability": 0.0,
+          "tame_items": "minecraft:barrier"
+        },
+        "minecraft:behavior.owner_hurt_by_target": {
+          "priority": 1
+        },
+        "minecraft:behavior.hurt_by_target": {
+          "priority": 2,
+          "entity_types": {
+            "filters": {
+              "test": "is_family",
+              "subject": "other",
+              "operator": "!=",
+              "value": "player"
+            }
+          }
+        },
+        "minecraft:behavior.follow_owner": {
+          "priority": 4,
+          "speed_multiplier": 1.3,
+          "start_distance": 5,
+          "stop_distance": 2
+        },
+        "minecraft:behavior.random_stroll": {
+          "priority": 8,
+          "speed_multiplier": 0.8
+        }
+      },
+      "cr:n_hunter": {
+        "minecraft:is_tamed": {},
+        "minecraft:tameable": {
+          "probability": 0.0,
+          "tame_items": "minecraft:barrier"
+        },
+        "minecraft:behavior.owner_hurt_target": {
+          "priority": 1
+        },
+        "minecraft:behavior.hurt_by_target": {
+          "priority": 2,
+          "entity_types": {
+            "filters": {
+              "test": "is_family",
+              "subject": "other",
+              "operator": "!=",
+              "value": "player"
+            }
+          }
+        },
+        "minecraft:behavior.nearest_attackable_target": {
+          "priority": 3,
+          "must_see": false,
+          "reselect_targets": true,
+          "within_radius": 24,
+          "entity_types": [
+            {
+              "filters": {
+                "any_of": [
+                  {
+                    "all_of": [
+                      {
+                        "test": "is_family",
+                        "subject": "other",
+                        "value": "monster"
+                      },
+                      {
+                        "test": "is_family",
+                        "subject": "other",
+                        "operator": "!=",
+                        "value": "creeper"
+                      },
+                      {
+                        "test": "is_family",
+                        "subject": "other",
+                        "operator": "!=",
+                        "value": "creation"
+                      }
+                    ]
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "cow"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "pig"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "sheep"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "chicken"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "rabbit"
+                  }
+                ]
+              },
+              "max_dist": 24
+            }
+          ]
+        },
+        "minecraft:behavior.follow_owner": {
+          "priority": 6,
+          "speed_multiplier": 1.3,
+          "start_distance": 20,
+          "stop_distance": 6
+        },
+        "minecraft:behavior.random_stroll": {
+          "priority": 7,
+          "speed_multiplier": 1.0,
+          "xz_dist": 12
+        }
+      },
+      "cr:n_berserker": {
+        "minecraft:is_tamed": {},
+        "minecraft:tameable": {
+          "probability": 0.0,
+          "tame_items": "minecraft:barrier"
+        },
+        "minecraft:behavior.owner_hurt_target": {
+          "priority": 1
+        },
+        "minecraft:behavior.hurt_by_target": {
+          "priority": 2,
+          "entity_types": {
+            "filters": {
+              "test": "is_family",
+              "subject": "other",
+              "operator": "!=",
+              "value": "player"
+            }
+          }
+        },
+        "minecraft:behavior.nearest_attackable_target": {
+          "priority": 3,
+          "must_see": false,
+          "reselect_targets": true,
+          "within_radius": 16,
+          "entity_types": [
+            {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "mob"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "operator": "!=",
+                    "value": "player"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "operator": "!=",
+                    "value": "creation"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "operator": "!=",
+                    "value": "villager"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "operator": "!=",
+                    "value": "irongolem"
+                  }
+                ]
+              },
+              "max_dist": 16
+            }
+          ]
+        },
+        "minecraft:behavior.follow_owner": {
+          "priority": 6,
+          "speed_multiplier": 1.3,
+          "start_distance": 12,
+          "stop_distance": 4
+        },
+        "minecraft:behavior.random_stroll": {
+          "priority": 8,
+          "speed_multiplier": 1.0
+        }
+      },
+      "cr:n_sentinel": {
+        "minecraft:is_tamed": {},
+        "minecraft:tameable": {
+          "probability": 0.0,
+          "tame_items": "minecraft:barrier"
+        },
+        "minecraft:home": {
+          "restriction_radius": 8
+        },
+        "minecraft:behavior.move_towards_home_restriction": {
+          "priority": 6,
+          "speed_multiplier": 1.0
+        },
+        "minecraft:behavior.owner_hurt_by_target": {
+          "priority": 1
+        },
+        "minecraft:behavior.hurt_by_target": {
+          "priority": 2,
+          "entity_types": {
+            "filters": {
+              "test": "is_family",
+              "subject": "other",
+              "operator": "!=",
+              "value": "player"
+            }
+          }
+        },
+        "minecraft:behavior.nearest_attackable_target": {
+          "priority": 3,
+          "must_see": false,
+          "reselect_targets": true,
+          "within_radius": 20,
+          "entity_types": [
+            {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "monster"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "operator": "!=",
+                    "value": "creeper"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "operator": "!=",
+                    "value": "creation"
+                  }
+                ]
+              },
+              "max_dist": 20
+            }
+          ]
+        }
+      },
+      "cr:n_wild": {
+        "minecraft:type_family": {
+          "family": [
+            "creation",
+            "creation_wild",
+            "mob"
+          ]
+        },
+        "minecraft:behavior.hurt_by_target": {
+          "priority": 1
+        },
+        "minecraft:behavior.nearest_attackable_target": {
+          "priority": 2,
+          "must_see": false,
+          "reselect_targets": true,
+          "within_radius": 24,
+          "entity_types": [
+            {
+              "filters": {
+                "any_of": [
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "villager"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "irongolem"
+                  }
+                ]
+              },
+              "max_dist": 24
+            }
+          ]
+        },
+        "minecraft:behavior.random_stroll": {
+          "priority": 7,
+          "speed_multiplier": 0.9,
+          "xz_dist": 10
+        }
+      },
+      "cr:seat_1": {
+        "minecraft:rideable": {
+          "seat_count": 1,
+          "family_types": [
+            "player"
+          ],
+          "interact_text": "action.interact.ride.horse",
+          "crouching_skip_interact": true,
+          "pull_in_entities": false,
+          "seats": [
+            {
+              "position": [
+                0.0,
+                1.1,
+                0.0
+              ]
+            }
+          ]
+        },
+        "minecraft:input_ground_controlled": {}
+      },
+      "cr:seat_2": {
+        "minecraft:rideable": {
+          "seat_count": 1,
+          "family_types": [
+            "player"
+          ],
+          "interact_text": "action.interact.ride.horse",
+          "crouching_skip_interact": true,
+          "pull_in_entities": false,
+          "seats": [
+            {
+              "position": [
+                0.0,
+                2.1,
+                0.0
+              ]
+            }
+          ]
+        },
+        "minecraft:input_ground_controlled": {}
+      },
+      "cr:seat_3": {
+        "minecraft:rideable": {
+          "seat_count": 1,
+          "family_types": [
+            "player"
+          ],
+          "interact_text": "action.interact.ride.horse",
+          "crouching_skip_interact": true,
+          "pull_in_entities": false,
+          "seats": [
+            {
+              "position": [
+                0.0,
+                3.1,
+                0.0
+              ]
+            }
+          ]
+        },
+        "minecraft:input_ground_controlled": {}
+      },
+      "cr:seat_4": {
+        "minecraft:rideable": {
+          "seat_count": 1,
+          "family_types": [
+            "player"
+          ],
+          "interact_text": "action.interact.ride.horse",
+          "crouching_skip_interact": true,
+          "pull_in_entities": false,
+          "seats": [
+            {
+              "position": [
+                0.0,
+                4.1,
+                0.0
+              ]
+            }
+          ]
+        },
+        "minecraft:input_ground_controlled": {}
+      },
+      "cr:seat_5": {
+        "minecraft:rideable": {
+          "seat_count": 1,
+          "family_types": [
+            "player"
+          ],
+          "interact_text": "action.interact.ride.horse",
+          "crouching_skip_interact": true,
+          "pull_in_entities": false,
+          "seats": [
+            {
+              "position": [
+                0.0,
+                5.1,
+                0.0
+              ]
+            }
+          ]
+        },
+        "minecraft:input_ground_controlled": {}
+      },
+      "cr:seat_6": {
+        "minecraft:rideable": {
+          "seat_count": 1,
+          "family_types": [
+            "player"
+          ],
+          "interact_text": "action.interact.ride.horse",
+          "crouching_skip_interact": true,
+          "pull_in_entities": false,
+          "seats": [
+            {
+              "position": [
+                0.0,
+                6.1,
+                0.0
+              ]
+            }
+          ]
+        },
+        "minecraft:input_ground_controlled": {}
+      },
+      "cr:seat_7": {
+        "minecraft:rideable": {
+          "seat_count": 1,
+          "family_types": [
+            "player"
+          ],
+          "interact_text": "action.interact.ride.horse",
+          "crouching_skip_interact": true,
+          "pull_in_entities": false,
+          "seats": [
+            {
+              "position": [
+                0.0,
+                7.1,
+                0.0
+              ]
+            }
+          ]
+        },
+        "minecraft:input_ground_controlled": {}
+      },
+      "cr:seat_8": {
+        "minecraft:rideable": {
+          "seat_count": 1,
+          "family_types": [
+            "player"
+          ],
+          "interact_text": "action.interact.ride.horse",
+          "crouching_skip_interact": true,
+          "pull_in_entities": false,
+          "seats": [
+            {
+              "position": [
+                0.0,
+                8.1,
+                0.0
+              ]
+            }
+          ]
+        },
+        "minecraft:input_ground_controlled": {}
+      },
+      "cr:seat_9": {
+        "minecraft:rideable": {
+          "seat_count": 1,
+          "family_types": [
+            "player"
+          ],
+          "interact_text": "action.interact.ride.horse",
+          "crouching_skip_interact": true,
+          "pull_in_entities": false,
+          "seats": [
+            {
+              "position": [
+                0.0,
+                9.1,
+                0.0
+              ]
+            }
+          ]
+        },
+        "minecraft:input_ground_controlled": {}
+      },
+      "cr:seat_10": {
+        "minecraft:rideable": {
+          "seat_count": 1,
+          "family_types": [
+            "player"
+          ],
+          "interact_text": "action.interact.ride.horse",
+          "crouching_skip_interact": true,
+          "pull_in_entities": false,
+          "seats": [
+            {
+              "position": [
+                0.0,
+                10.1,
+                0.0
+              ]
+            }
+          ]
+        },
+        "minecraft:input_ground_controlled": {}
+      },
+      "cr:seat_11": {
+        "minecraft:rideable": {
+          "seat_count": 1,
+          "family_types": [
+            "player"
+          ],
+          "interact_text": "action.interact.ride.horse",
+          "crouching_skip_interact": true,
+          "pull_in_entities": false,
+          "seats": [
+            {
+              "position": [
+                0.0,
+                11.1,
+                0.0
+              ]
+            }
+          ]
+        },
+        "minecraft:input_ground_controlled": {}
+      },
+      "cr:seat_12": {
+        "minecraft:rideable": {
+          "seat_count": 1,
+          "family_types": [
+            "player"
+          ],
+          "interact_text": "action.interact.ride.horse",
+          "crouching_skip_interact": true,
+          "pull_in_entities": false,
+          "seats": [
+            {
+              "position": [
+                0.0,
+                12.1,
+                0.0
+              ]
+            }
+          ]
+        },
+        "minecraft:input_ground_controlled": {}
+      },
+      "cr:frozen": {
+        "minecraft:movement": {
+          "value": 0.0
+        }
+      },
+      "cr:fireproof": {
+        "minecraft:fire_immune": true
+      },
+      "cr:heavy": {
+        "minecraft:knockback_resistance": {
+          "value": 1.0
+        }
+      }
+    },
+    "components": {
+      "minecraft:type_family": {
+        "family": [
+          "creation",
+          "mob"
+        ]
+      },
+      "minecraft:collision_box": {
+        "width": 1.0,
+        "height": 1.8
+      },
+      "minecraft:health": {
+        "value": 30,
+        "max": 30
+      },
+      "minecraft:attack": {
+        "damage": 4
+      },
+      "minecraft:movement": {
+        "value": 0.23
+      },
+      "minecraft:navigation.walk": {
+        "can_path_over_water": true,
+        "avoid_damage_blocks": true,
+        "can_pass_doors": true
+      },
+      "minecraft:movement.basic": {},
+      "minecraft:jump.static": {},
+      "minecraft:physics": {},
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": true
+      },
+      "minecraft:persistent": {},
+      "minecraft:breathable": {
+        "total_supply": 15,
+        "suffocate_time": 0,
+        "breathes_water": true
+      },
+      "minecraft:damage_sensor": {
+        "triggers": [
+          {
+            "cause": "fall",
+            "deals_damage": false
+          },
+          {
+            "cause": "suffocation",
+            "deals_damage": false
+          }
+        ]
+      },
+      "minecraft:healable": {
+        "items": [
+          {
+            "item": "iron_ingot",
+            "heal_amount": 15
+          },
+          {
+            "item": "cobblestone",
+            "heal_amount": 4
+          },
+          {
+            "item": "gold_ingot",
+            "heal_amount": 10
+          }
+        ]
+      },
+      "minecraft:behavior.float": {
+        "priority": 0
+      },
+      "minecraft:behavior.melee_attack": {
+        "priority": 2,
+        "speed_multiplier": 1.25,
+        "track_target": true,
+        "reach_multiplier": 1.6
+      },
+      "minecraft:behavior.look_at_player": {
+        "priority": 9,
+        "look_distance": 8
+      },
+      "minecraft:behavior.random_look_around": {
+        "priority": 10
+      }
+    },
+    "events": {
+      "cr:set_hp_0": {
+        "remove": {
+          "component_groups": [
+            "cr:hp_0",
+            "cr:hp_1",
+            "cr:hp_2",
+            "cr:hp_3",
+            "cr:hp_4",
+            "cr:hp_5",
+            "cr:hp_6",
+            "cr:hp_7",
+            "cr:hp_8",
+            "cr:hp_9",
+            "cr:hp_10",
+            "cr:hp_11",
+            "cr:hp_12"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "cr:hp_0"
+          ]
+        }
+      },
+      "cr:set_hp_1": {
+        "remove": {
+          "component_groups": [
+            "cr:hp_0",
+            "cr:hp_1",
+            "cr:hp_2",
+            "cr:hp_3",
+            "cr:hp_4",
+            "cr:hp_5",
+            "cr:hp_6",
+            "cr:hp_7",
+            "cr:hp_8",
+            "cr:hp_9",
+            "cr:hp_10",
+            "cr:hp_11",
+            "cr:hp_12"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "cr:hp_1"
+          ]
+        }
+      },
+      "cr:set_hp_2": {
+        "remove": {
+          "component_groups": [
+            "cr:hp_0",
+            "cr:hp_1",
+            "cr:hp_2",
+            "cr:hp_3",
+            "cr:hp_4",
+            "cr:hp_5",
+            "cr:hp_6",
+            "cr:hp_7",
+            "cr:hp_8",
+            "cr:hp_9",
+            "cr:hp_10",
+            "cr:hp_11",
+            "cr:hp_12"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "cr:hp_2"
+          ]
+        }
+      },
+      "cr:set_hp_3": {
+        "remove": {
+          "component_groups": [
+            "cr:hp_0",
+            "cr:hp_1",
+            "cr:hp_2",
+            "cr:hp_3",
+            "cr:hp_4",
+            "cr:hp_5",
+            "cr:hp_6",
+            "cr:hp_7",
+            "cr:hp_8",
+            "cr:hp_9",
+            "cr:hp_10",
+            "cr:hp_11",
+            "cr:hp_12"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "cr:hp_3"
+          ]
+        }
+      },
+      "cr:set_hp_4": {
+        "remove": {
+          "component_groups": [
+            "cr:hp_0",
+            "cr:hp_1",
+            "cr:hp_2",
+            "cr:hp_3",
+            "cr:hp_4",
+            "cr:hp_5",
+            "cr:hp_6",
+            "cr:hp_7",
+            "cr:hp_8",
+            "cr:hp_9",
+            "cr:hp_10",
+            "cr:hp_11",
+            "cr:hp_12"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "cr:hp_4"
+          ]
+        }
+      },
+      "cr:set_hp_5": {
+        "remove": {
+          "component_groups": [
+            "cr:hp_0",
+            "cr:hp_1",
+            "cr:hp_2",
+            "cr:hp_3",
+            "cr:hp_4",
+            "cr:hp_5",
+            "cr:hp_6",
+            "cr:hp_7",
+            "cr:hp_8",
+            "cr:hp_9",
+            "cr:hp_10",
+            "cr:hp_11",
+            "cr:hp_12"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "cr:hp_5"
+          ]
+        }
+      },
+      "cr:set_hp_6": {
+        "remove": {
+          "component_groups": [
+            "cr:hp_0",
+            "cr:hp_1",
+            "cr:hp_2",
+            "cr:hp_3",
+            "cr:hp_4",
+            "cr:hp_5",
+            "cr:hp_6",
+            "cr:hp_7",
+            "cr:hp_8",
+            "cr:hp_9",
+            "cr:hp_10",
+            "cr:hp_11",
+            "cr:hp_12"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "cr:hp_6"
+          ]
+        }
+      },
+      "cr:set_hp_7": {
+        "remove": {
+          "component_groups": [
+            "cr:hp_0",
+            "cr:hp_1",
+            "cr:hp_2",
+            "cr:hp_3",
+            "cr:hp_4",
+            "cr:hp_5",
+            "cr:hp_6",
+            "cr:hp_7",
+            "cr:hp_8",
+            "cr:hp_9",
+            "cr:hp_10",
+            "cr:hp_11",
+            "cr:hp_12"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "cr:hp_7"
+          ]
+        }
+      },
+      "cr:set_hp_8": {
+        "remove": {
+          "component_groups": [
+            "cr:hp_0",
+            "cr:hp_1",
+            "cr:hp_2",
+            "cr:hp_3",
+            "cr:hp_4",
+            "cr:hp_5",
+            "cr:hp_6",
+            "cr:hp_7",
+            "cr:hp_8",
+            "cr:hp_9",
+            "cr:hp_10",
+            "cr:hp_11",
+            "cr:hp_12"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "cr:hp_8"
+          ]
+        }
+      },
+      "cr:set_hp_9": {
+        "remove": {
+          "component_groups": [
+            "cr:hp_0",
+            "cr:hp_1",
+            "cr:hp_2",
+            "cr:hp_3",
+            "cr:hp_4",
+            "cr:hp_5",
+            "cr:hp_6",
+            "cr:hp_7",
+            "cr:hp_8",
+            "cr:hp_9",
+            "cr:hp_10",
+            "cr:hp_11",
+            "cr:hp_12"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "cr:hp_9"
+          ]
+        }
+      },
+      "cr:set_hp_10": {
+        "remove": {
+          "component_groups": [
+            "cr:hp_0",
+            "cr:hp_1",
+            "cr:hp_2",
+            "cr:hp_3",
+            "cr:hp_4",
+            "cr:hp_5",
+            "cr:hp_6",
+            "cr:hp_7",
+            "cr:hp_8",
+            "cr:hp_9",
+            "cr:hp_10",
+            "cr:hp_11",
+            "cr:hp_12"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "cr:hp_10"
+          ]
+        }
+      },
+      "cr:set_hp_11": {
+        "remove": {
+          "component_groups": [
+            "cr:hp_0",
+            "cr:hp_1",
+            "cr:hp_2",
+            "cr:hp_3",
+            "cr:hp_4",
+            "cr:hp_5",
+            "cr:hp_6",
+            "cr:hp_7",
+            "cr:hp_8",
+            "cr:hp_9",
+            "cr:hp_10",
+            "cr:hp_11",
+            "cr:hp_12"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "cr:hp_11"
+          ]
+        }
+      },
+      "cr:set_hp_12": {
+        "remove": {
+          "component_groups": [
+            "cr:hp_0",
+            "cr:hp_1",
+            "cr:hp_2",
+            "cr:hp_3",
+            "cr:hp_4",
+            "cr:hp_5",
+            "cr:hp_6",
+            "cr:hp_7",
+            "cr:hp_8",
+            "cr:hp_9",
+            "cr:hp_10",
+            "cr:hp_11",
+            "cr:hp_12"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "cr:hp_12"
+          ]
+        }
+      },
+      "cr:set_dmg_0": {
+        "remove": {
+          "component_groups": [
+            "cr:dmg_0",
+            "cr:dmg_1",
+            "cr:dmg_2",
+            "cr:dmg_3",
+            "cr:dmg_4",
+            "cr:dmg_5",
+            "cr:dmg_6",
+            "cr:dmg_7",
+            "cr:dmg_8",
+            "cr:dmg_9",
+            "cr:dmg_10"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "cr:dmg_0"
+          ]
+        }
+      },
+      "cr:set_dmg_1": {
+        "remove": {
+          "component_groups": [
+            "cr:dmg_0",
+            "cr:dmg_1",
+            "cr:dmg_2",
+            "cr:dmg_3",
+            "cr:dmg_4",
+            "cr:dmg_5",
+            "cr:dmg_6",
+            "cr:dmg_7",
+            "cr:dmg_8",
+            "cr:dmg_9",
+            "cr:dmg_10"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "cr:dmg_1"
+          ]
+        }
+      },
+      "cr:set_dmg_2": {
+        "remove": {
+          "component_groups": [
+            "cr:dmg_0",
+            "cr:dmg_1",
+            "cr:dmg_2",
+            "cr:dmg_3",
+            "cr:dmg_4",
+            "cr:dmg_5",
+            "cr:dmg_6",
+            "cr:dmg_7",
+            "cr:dmg_8",
+            "cr:dmg_9",
+            "cr:dmg_10"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "cr:dmg_2"
+          ]
+        }
+      },
+      "cr:set_dmg_3": {
+        "remove": {
+          "component_groups": [
+            "cr:dmg_0",
+            "cr:dmg_1",
+            "cr:dmg_2",
+            "cr:dmg_3",
+            "cr:dmg_4",
+            "cr:dmg_5",
+            "cr:dmg_6",
+            "cr:dmg_7",
+            "cr:dmg_8",
+            "cr:dmg_9",
+            "cr:dmg_10"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "cr:dmg_3"
+          ]
+        }
+      },
+      "cr:set_dmg_4": {
+        "remove": {
+          "component_groups": [
+            "cr:dmg_0",
+            "cr:dmg_1",
+            "cr:dmg_2",
+            "cr:dmg_3",
+            "cr:dmg_4",
+            "cr:dmg_5",
+            "cr:dmg_6",
+            "cr:dmg_7",
+            "cr:dmg_8",
+            "cr:dmg_9",
+            "cr:dmg_10"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "cr:dmg_4"
+          ]
+        }
+      },
+      "cr:set_dmg_5": {
+        "remove": {
+          "component_groups": [
+            "cr:dmg_0",
+            "cr:dmg_1",
+            "cr:dmg_2",
+            "cr:dmg_3",
+            "cr:dmg_4",
+            "cr:dmg_5",
+            "cr:dmg_6",
+            "cr:dmg_7",
+            "cr:dmg_8",
+            "cr:dmg_9",
+            "cr:dmg_10"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "cr:dmg_5"
+          ]
+        }
+      },
+      "cr:set_dmg_6": {
+        "remove": {
+          "component_groups": [
+            "cr:dmg_0",
+            "cr:dmg_1",
+            "cr:dmg_2",
+            "cr:dmg_3",
+            "cr:dmg_4",
+            "cr:dmg_5",
+            "cr:dmg_6",
+            "cr:dmg_7",
+            "cr:dmg_8",
+            "cr:dmg_9",
+            "cr:dmg_10"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "cr:dmg_6"
+          ]
+        }
+      },
+      "cr:set_dmg_7": {
+        "remove": {
+          "component_groups": [
+            "cr:dmg_0",
+            "cr:dmg_1",
+            "cr:dmg_2",
+            "cr:dmg_3",
+            "cr:dmg_4",
+            "cr:dmg_5",
+            "cr:dmg_6",
+            "cr:dmg_7",
+            "cr:dmg_8",
+            "cr:dmg_9",
+            "cr:dmg_10"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "cr:dmg_7"
+          ]
+        }
+      },
+      "cr:set_dmg_8": {
+        "remove": {
+          "component_groups": [
+            "cr:dmg_0",
+            "cr:dmg_1",
+            "cr:dmg_2",
+            "cr:dmg_3",
+            "cr:dmg_4",
+            "cr:dmg_5",
+            "cr:dmg_6",
+            "cr:dmg_7",
+            "cr:dmg_8",
+            "cr:dmg_9",
+            "cr:dmg_10"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "cr:dmg_8"
+          ]
+        }
+      },
+      "cr:set_dmg_9": {
+        "remove": {
+          "component_groups": [
+            "cr:dmg_0",
+            "cr:dmg_1",
+            "cr:dmg_2",
+            "cr:dmg_3",
+            "cr:dmg_4",
+            "cr:dmg_5",
+            "cr:dmg_6",
+            "cr:dmg_7",
+            "cr:dmg_8",
+            "cr:dmg_9",
+            "cr:dmg_10"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "cr:dmg_9"
+          ]
+        }
+      },
+      "cr:set_dmg_10": {
+        "remove": {
+          "component_groups": [
+            "cr:dmg_0",
+            "cr:dmg_1",
+            "cr:dmg_2",
+            "cr:dmg_3",
+            "cr:dmg_4",
+            "cr:dmg_5",
+            "cr:dmg_6",
+            "cr:dmg_7",
+            "cr:dmg_8",
+            "cr:dmg_9",
+            "cr:dmg_10"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "cr:dmg_10"
+          ]
+        }
+      },
+      "cr:set_spd_0": {
+        "remove": {
+          "component_groups": [
+            "cr:spd_0",
+            "cr:spd_1",
+            "cr:spd_2",
+            "cr:spd_3",
+            "cr:spd_4"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "cr:spd_0"
+          ]
+        }
+      },
+      "cr:set_spd_1": {
+        "remove": {
+          "component_groups": [
+            "cr:spd_0",
+            "cr:spd_1",
+            "cr:spd_2",
+            "cr:spd_3",
+            "cr:spd_4"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "cr:spd_1"
+          ]
+        }
+      },
+      "cr:set_spd_2": {
+        "remove": {
+          "component_groups": [
+            "cr:spd_0",
+            "cr:spd_1",
+            "cr:spd_2",
+            "cr:spd_3",
+            "cr:spd_4"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "cr:spd_2"
+          ]
+        }
+      },
+      "cr:set_spd_3": {
+        "remove": {
+          "component_groups": [
+            "cr:spd_0",
+            "cr:spd_1",
+            "cr:spd_2",
+            "cr:spd_3",
+            "cr:spd_4"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "cr:spd_3"
+          ]
+        }
+      },
+      "cr:set_spd_4": {
+        "remove": {
+          "component_groups": [
+            "cr:spd_0",
+            "cr:spd_1",
+            "cr:spd_2",
+            "cr:spd_3",
+            "cr:spd_4"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "cr:spd_4"
+          ]
+        }
+      },
+      "cr:set_box_0": {
+        "remove": {
+          "component_groups": [
+            "cr:box_0",
+            "cr:box_1",
+            "cr:box_2",
+            "cr:box_3",
+            "cr:box_4"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "cr:box_0"
+          ]
+        }
+      },
+      "cr:set_box_1": {
+        "remove": {
+          "component_groups": [
+            "cr:box_0",
+            "cr:box_1",
+            "cr:box_2",
+            "cr:box_3",
+            "cr:box_4"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "cr:box_1"
+          ]
+        }
+      },
+      "cr:set_box_2": {
+        "remove": {
+          "component_groups": [
+            "cr:box_0",
+            "cr:box_1",
+            "cr:box_2",
+            "cr:box_3",
+            "cr:box_4"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "cr:box_2"
+          ]
+        }
+      },
+      "cr:set_box_3": {
+        "remove": {
+          "component_groups": [
+            "cr:box_0",
+            "cr:box_1",
+            "cr:box_2",
+            "cr:box_3",
+            "cr:box_4"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "cr:box_3"
+          ]
+        }
+      },
+      "cr:set_box_4": {
+        "remove": {
+          "component_groups": [
+            "cr:box_0",
+            "cr:box_1",
+            "cr:box_2",
+            "cr:box_3",
+            "cr:box_4"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "cr:box_4"
+          ]
+        }
+      },
+      "cr:nature_0": {
+        "remove": {
+          "component_groups": [
+            "cr:n_guardian",
+            "cr:n_companion",
+            "cr:n_hunter",
+            "cr:n_berserker",
+            "cr:n_sentinel",
+            "cr:n_wild"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "cr:n_guardian"
+          ]
+        }
+      },
+      "cr:nature_1": {
+        "remove": {
+          "component_groups": [
+            "cr:n_guardian",
+            "cr:n_companion",
+            "cr:n_hunter",
+            "cr:n_berserker",
+            "cr:n_sentinel",
+            "cr:n_wild"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "cr:n_companion"
+          ]
+        }
+      },
+      "cr:nature_2": {
+        "remove": {
+          "component_groups": [
+            "cr:n_guardian",
+            "cr:n_companion",
+            "cr:n_hunter",
+            "cr:n_berserker",
+            "cr:n_sentinel",
+            "cr:n_wild"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "cr:n_hunter"
+          ]
+        }
+      },
+      "cr:nature_3": {
+        "remove": {
+          "component_groups": [
+            "cr:n_guardian",
+            "cr:n_companion",
+            "cr:n_hunter",
+            "cr:n_berserker",
+            "cr:n_sentinel",
+            "cr:n_wild"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "cr:n_berserker"
+          ]
+        }
+      },
+      "cr:nature_4": {
+        "remove": {
+          "component_groups": [
+            "cr:n_guardian",
+            "cr:n_companion",
+            "cr:n_hunter",
+            "cr:n_berserker",
+            "cr:n_sentinel",
+            "cr:n_wild"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "cr:n_sentinel"
+          ]
+        }
+      },
+      "cr:nature_5": {
+        "remove": {
+          "component_groups": [
+            "cr:n_guardian",
+            "cr:n_companion",
+            "cr:n_hunter",
+            "cr:n_berserker",
+            "cr:n_sentinel",
+            "cr:n_wild"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "cr:n_wild"
+          ]
+        }
+      },
+      "cr:seat_1": {
+        "add": {
+          "component_groups": [
+            "cr:seat_1"
+          ]
+        }
+      },
+      "cr:seat_2": {
+        "add": {
+          "component_groups": [
+            "cr:seat_2"
+          ]
+        }
+      },
+      "cr:seat_3": {
+        "add": {
+          "component_groups": [
+            "cr:seat_3"
+          ]
+        }
+      },
+      "cr:seat_4": {
+        "add": {
+          "component_groups": [
+            "cr:seat_4"
+          ]
+        }
+      },
+      "cr:seat_5": {
+        "add": {
+          "component_groups": [
+            "cr:seat_5"
+          ]
+        }
+      },
+      "cr:seat_6": {
+        "add": {
+          "component_groups": [
+            "cr:seat_6"
+          ]
+        }
+      },
+      "cr:seat_7": {
+        "add": {
+          "component_groups": [
+            "cr:seat_7"
+          ]
+        }
+      },
+      "cr:seat_8": {
+        "add": {
+          "component_groups": [
+            "cr:seat_8"
+          ]
+        }
+      },
+      "cr:seat_9": {
+        "add": {
+          "component_groups": [
+            "cr:seat_9"
+          ]
+        }
+      },
+      "cr:seat_10": {
+        "add": {
+          "component_groups": [
+            "cr:seat_10"
+          ]
+        }
+      },
+      "cr:seat_11": {
+        "add": {
+          "component_groups": [
+            "cr:seat_11"
+          ]
+        }
+      },
+      "cr:seat_12": {
+        "add": {
+          "component_groups": [
+            "cr:seat_12"
+          ]
+        }
+      },
+      "cr:freeze": {
+        "add": {
+          "component_groups": [
+            "cr:frozen"
+          ]
+        }
+      },
+      "cr:unfreeze": {
+        "remove": {
+          "component_groups": [
+            "cr:frozen"
+          ]
+        }
+      },
+      "cr:fireproof": {
+        "add": {
+          "component_groups": [
+            "cr:fireproof"
+          ]
+        }
+      },
+      "cr:heavy": {
+        "add": {
+          "component_groups": [
+            "cr:heavy"
+          ]
+        }
+      },
+      "minecraft:entity_spawned": {
+        "add": {
+          "component_groups": [
+            "cr:hp_2",
+            "cr:dmg_2",
+            "cr:spd_2",
+            "cr:box_1"
+          ]
+        }
+      }
+    }
+  }
+}

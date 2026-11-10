@@ -1,0 +1,36 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "cr:life_spark"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "RGR",
+      "GOG",
+      "RGR"
+    ],
+    "key": {
+      "R": {
+        "item": "minecraft:redstone"
+      },
+      "G": {
+        "item": "minecraft:glowstone_dust"
+      },
+      "O": {
+        "item": "minecraft:gold_ingot"
+      }
+    },
+    "unlock": [
+      {
+        "item": "minecraft:gold_ingot"
+      }
+    ],
+    "result": {
+      "item": "cr:life_spark",
+      "count": 2
+    }
+  }
+}

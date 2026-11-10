@@ -1,0 +1,15 @@
+{
+  "resource_pack_name": "CreationsVivantes",
+  "texture_name": "atlas.items",
+  "texture_data": {
+    "cr_life_spark": {
+      "textures": "textures/items/cr_life_spark"
+    },
+    "cr_creator_staff": {
+      "textures": "textures/items/cr_creator_staff"
+    },
+    "cr_vehicle_key": {
+      "textures": "textures/items/cr_vehicle_key"
+    }
+  }
+}

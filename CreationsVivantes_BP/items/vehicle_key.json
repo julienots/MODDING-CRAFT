@@ -1,0 +1,23 @@
+{
+  "format_version": "1.21.50",
+  "minecraft:item": {
+    "description": {
+      "identifier": "cr:vehicle_key",
+      "menu_category": {
+        "category": "equipment"
+      }
+    },
+    "components": {
+      "minecraft:icon": {
+        "textures": {
+          "default": "cr_vehicle_key"
+        }
+      },
+      "minecraft:display_name": {
+        "value": "cr.item.vehicle_key"
+      },
+      "minecraft:max_stack_size": 1,
+      "minecraft:hand_equipped": true
+    }
+  }
+}

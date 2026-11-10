@@ -1,0 +1,21 @@
+{
+  "entity_sounds": {
+    "entities": {
+      "cr:core": {
+        "volume": 1.0,
+        "pitch": [
+          0.8,
+          1.2
+        ],
+        "events": {
+          "hurt": "mob.irongolem.hit",
+          "death": "mob.irongolem.death",
+          "step": {
+            "sound": "mob.irongolem.walk",
+            "volume": 0.7
+          }
+        }
+      }
+    }
+  }
+}

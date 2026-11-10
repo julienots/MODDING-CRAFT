@@ -1,0 +1,18 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "cr:core",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/creation/eyes_0"
+      },
+      "geometry": {
+        "default": "geometry.cr_voxel"
+      },
+      "render_controllers": []
+    }
+  }
+}

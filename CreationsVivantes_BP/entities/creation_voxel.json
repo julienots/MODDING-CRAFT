@@ -1,0 +1,113 @@
+{
+  "format_version": "1.21.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "cr:voxel",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "properties": {
+        "cr:tex": {
+          "type": "int",
+          "range": [
+            0,
+            255
+          ],
+          "default": 0,
+          "client_sync": true
+        },
+        "cr:eye": {
+          "type": "int",
+          "range": [
+            0,
+            6
+          ],
+          "default": 0,
+          "client_sync": true
+        }
+      }
+    },
+    "components": {
+      "minecraft:type_family": {
+        "family": [
+          "creation_part",
+          "inanimate"
+        ]
+      },
+      "minecraft:collision_box": {
+        "width": 1.0,
+        "height": 1.0
+      },
+      "minecraft:health": {
+        "value": 10000,
+        "max": 10000
+      },
+      "minecraft:physics": {
+        "has_gravity": false,
+        "has_collision": false
+      },
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": false
+      },
+      "minecraft:knockback_resistance": {
+        "value": 1.0
+      },
+      "minecraft:persistent": {},
+      "minecraft:nameable": {
+        "always_show": true
+      },
+      "minecraft:fire_immune": true,
+      "minecraft:breathable": {
+        "total_supply": 15,
+        "suffocate_time": 0,
+        "breathes_water": true
+      },
+      "minecraft:damage_sensor": {
+        "triggers": [
+          {
+            "cause": "fall",
+            "deals_damage": false
+          },
+          {
+            "cause": "suffocation",
+            "deals_damage": false
+          },
+          {
+            "cause": "drowning",
+            "deals_damage": false
+          },
+          {
+            "cause": "fire",
+            "deals_damage": false
+          },
+          {
+            "cause": "fire_tick",
+            "deals_damage": false
+          },
+          {
+            "cause": "lava",
+            "deals_damage": false
+          },
+          {
+            "cause": "void",
+            "deals_damage": false
+          }
+        ]
+      },
+      "minecraft:interact": {
+        "interactions": [
+          {
+            "on_interact": {
+              "event": "cr:noop",
+              "target": "self"
+            },
+            "interact_text": "action.interact.ride.horse"
+          }
+        ]
+      }
+    },
+    "events": {
+      "cr:noop": {}
+    }
+  }
+}

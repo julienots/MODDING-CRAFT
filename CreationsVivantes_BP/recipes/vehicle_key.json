@@ -1,0 +1,32 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "cr:vehicle_key"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      " I",
+      "LI",
+      "I "
+    ],
+    "key": {
+      "I": {
+        "item": "minecraft:iron_ingot"
+      },
+      "L": {
+        "item": "cr:life_spark"
+      }
+    },
+    "unlock": [
+      {
+        "item": "cr:life_spark"
+      }
+    ],
+    "result": {
+      "item": "cr:vehicle_key"
+    }
+  }
+}
